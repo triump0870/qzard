@@ -2,19 +2,20 @@
 
 # qzard
 
-qzard is a _short description_. It is built with [Python][0] using the [Django Web Framework][1].
+qzard is a Crowd Sourced app for Quiz Questions. It is built with [Python][0] using the [Django Web Framework][1].
 
 This project has the following basic apps:
 
-* App1 (short desc)
-* App2 (short desc)
-* App3 (short desc)
+* Accounts (App for user acconts)
+* Profiles (App for user profiles)
+* Quizes (App for organizing quiz events)
+* Quizpool (App for creating quiz questions)
 
 ## Installation
 
 ### Quick start
 
-To set up a development environment quickly, first install Python 3. It
+To set up a development environment quickly, first install Python 2.7/ Python 3. It
 comes with virtualenv built-in. So create a virtual env by:
 
     1. `$ python3 -m venv qzard`
