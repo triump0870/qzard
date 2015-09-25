@@ -6,6 +6,7 @@ urlpatterns = [
     url(r'^login/$', views.LoginView.as_view(), name="login"),
     url(r'^logout/$', views.LogoutView.as_view(), name='logout'),
     url(r'^signup/$', views.SignUpView.as_view(), name='signup'),
+    url(r'^signup/social$', views.SocialSignUpView.as_view(), name='social'),
     url(r'^password-change/$', views.PasswordChangeView.as_view(),
         name='password-change'),
     url(r'^password-reset/$', views.PasswordResetView.as_view(),

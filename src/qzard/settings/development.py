@@ -1,4 +1,5 @@
 from .base import *             # NOQA
+from social import *
 import sys
 import logging.config
 
@@ -15,7 +16,12 @@ if "celery" in sys.argv[0]:
 
 # Django Debug Toolbar
 INSTALLED_APPS += (
-    'debug_toolbar.apps.DebugToolbarConfig',)
+    'debug_toolbar.apps.DebugToolbarConfig',
+    'oauth2_provider',
+    'social.apps.django_app.default',
+    'rest_framework_social_oauth2',
+    'rest_framework',
+    )
 
 # Django debug toolbar middleware
 MIDDLEWARE_CLASSES += \
@@ -28,7 +34,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 THUMBNAIL_DEBUG = True
 
 # Log everything to the logs directory at the top
-LOGFILE_ROOT = join(dirname(BASE_DIR), 'logs')
+LOGFILE_ROOT = root('..','logs')
 
 # Reset logging
 # (see http://www.caktusgroup.com/blog/2015/01/27/Django-Logging-Configuration-logging_config-default-settings-logger/)

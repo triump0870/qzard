@@ -8,12 +8,16 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/dev/ref/settings/
 """
 from django.core.urlresolvers import reverse_lazy
-from os.path import dirname, join, exists
+from os.path import dirname, join, exists, abspath
 
 # Build paths inside the project like this: join(BASE_DIR, "directory")
-BASE_DIR = dirname(dirname(dirname(__file__)))
-STATICFILES_DIRS = [join(BASE_DIR, 'static')]
-MEDIA_ROOT = join(BASE_DIR, 'media')
+# BASE_DIR = Path(__file__).ancestor(3)
+
+here = lambda *x: join(abspath(dirname(__file__)), *x)
+PROJECT_ROOT = here("..","..")
+root = lambda *x: join(abspath(PROJECT_ROOT), *x)
+STATICFILES_DIRS = [root('static')]
+MEDIA_ROOT = root('media')
 MEDIA_URL = "/media/"
 
 # Use Django templates using the new Django 1.8 TEMPLATES settings
@@ -21,7 +25,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            join(BASE_DIR, 'templates'),
+            root('templates'),
             # insert more TEMPLATE_DIRS here
         ],
         'APP_DIRS': True,
@@ -36,6 +40,10 @@ TEMPLATES = [
                 'django.template.context_processors.static',
                 'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
+
+                # Social Auth
+                'social.apps.django_app.context_processors.backends',
+                'social.apps.django_app.context_processors.login_redirect',
             ],
         },
     },
