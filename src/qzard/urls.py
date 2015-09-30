@@ -13,6 +13,8 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
     url(r'^', include(accounts.urls, namespace='accounts')),
+    url(r'^accounts/', include('allauth.urls')),
+
 ]
 
 # User-uploaded files like profile pics need to be served in development

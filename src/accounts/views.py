@@ -18,6 +18,9 @@ from social.apps.django_app.utils import load_backend, load_strategy
 from social.backends.oauth import BaseOAuth1, BaseOAuth2
 from social.exceptions import AuthAlreadyAssociated
 
+# allauth import for populating user fields
+from allauth.socialaccount.adapter import DefaultSocialAccountAdapter
+
 # Other third party app imports
 from authtools import views as authviews
 from braces import views as bracesviews
@@ -25,6 +28,7 @@ from braces import views as bracesviews
 # Local imports
 from . import forms
 from serializer import SocialSignUpSerializer
+from permissions import IsAuthenticatedOrCreate
 
 User = get_user_model()
 
@@ -65,7 +69,10 @@ class SignUpView(bracesviews.AnonymousRequiredMixin,
         auth.login(self.request, user)
         return r
 
-class SocialSignUp(generics.CreateAPIView):
+class FacebookSignUp(generic.CreateView):
+    pass
+
+class SocialSignUpView(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = SocialSignUpSerializer
     permission_classes = (IsAuthenticatedOrCreate,)

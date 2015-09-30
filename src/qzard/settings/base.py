@@ -44,6 +44,7 @@ TEMPLATES = [
                 # Social Auth
                 'social.apps.django_app.context_processors.backends',
                 'social.apps.django_app.context_processors.login_redirect',
+                'django.template.context_processors.request',
             ],
         },
     },
@@ -114,7 +115,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 

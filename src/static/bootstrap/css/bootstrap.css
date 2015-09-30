@@ -6944,3 +6944,37 @@ a.list-group-item-danger.active:focus {
 .popover {
   color: #555555;
 }
+
+/*Custom Styling*/
+.sign-up-btn {
+  color: #fff;
+  display: inline-block;
+  margin-top: 10px;
+  -webkit-border-radius:  5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-decoration: none!important;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn-orange {
+  background-color: #f49020;
+}
+
+.float-left {
+  float: left;
+}
+
+.btn-icon {
+  padding: 10px 20px;
+  border-right: 1px solid rgba(0,0,0,0.1);
+  width: 20px;
+  text-align: center;
+}
+
+.btn-text {
+  padding: 10px 20px;
+}
+
+

@@ -4,15 +4,47 @@
 
 {% block title %}{{ block.super }}Sign Up{% endblock %}
 
-{% block form_heading %}Signing Up is Free{% endblock %}
+{% block form_heading %}Sign Up on Qzard{% endblock %}
 
 {% block form %}
-  {% crispy form %}
+{% load socialaccount %}
+<div class="container profile-head">
+    <div class="sign-up-form-container inline-block align-left v-middle">
+    {% crispy form %}
 
-  <div class="form-message">
-    <p>
-      Already signed up? <a href="{% url 'accounts:login' %}">Log in</a>.
-    </p>
-  </div>
+      <div class="form-message">
+        <p>
+          Already signed up? <a href="{% url 'accounts:login' %}">Log in</a>.
+        </p>
+      </div>
+    </div>
+
+    <div class="social-form-container inline-block v-middle">
+        <a class="sign-up-btn btn-orange full-width weight-700 large-20" style="text-decoration:none; color: #fff;" href="{% provider_login_url "facebook"  %}">
+            <div class="btn-icon float-left">
+                <i class="fa fa-facebook"></i>
+            </div>
+            <div class="btn-text float-left">
+                Sign Up with Facebook
+            </div>
+        </a>
+        <a class="sign-up-btn btn-orange full-width weight-700 large-20" style="text-decoration:none; color: #fff;" href="{% provider_login_url "facebook"  %}">
+            <div class="btn-icon float-left">
+                <i class="fa fa-google"></i>
+            </div>
+            <div class="btn-text float-left">
+                Sign Up with Google
+            </div>
+        </a>
+        <a class="sign-up-btn btn-orange full-width weight-700 large-20" style="text-decoration:none; color: #fff;" href="{% provider_login_url "facebook"  %}">
+            <div class="btn-icon float-left">
+                <i class="fa fa-github"></i>
+            </div>
+            <div class="btn-text float-left">
+                Sign Up with Github
+            </div>
+        </a>
+    </div>
+</div>
 {% endblock form %}
 
