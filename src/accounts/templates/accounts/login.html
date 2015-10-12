@@ -4,10 +4,12 @@
 
 {% block title %}{{ block.super }}Log In{% endblock %}
 
-{% block form_heading %}Log In to Qzard{% endblock %}
 
 {% block form %}
-<div class="container profile-head">
+<div class="form-head">
+    <div class="text-center">
+        <h1 class="dark">Log In to Qzard</h1>
+    </div>
     <div class="sign-up-form-container inline-block align-left v-middle">
         {% crispy form %}
         <div class="form-message">

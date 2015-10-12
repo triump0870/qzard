@@ -40,7 +40,7 @@ class SignupForm(authtoolsforms.UserCreationForm):
             Field('name', placeholder="Enter Full Name"),
             Field('password1', placeholder="Enter Password"),
             Field('password2', placeholder="Re-enter Password"),
-            Submit('sign_up', 'Sign up', css_class="btn-warning"),
+            Submit('sign_up', 'Sign up', css_class="btn btn-lg btn-primary btn-block"),
             )
 
 
