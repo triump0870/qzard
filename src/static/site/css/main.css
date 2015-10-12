@@ -58,12 +58,12 @@ body>.navbar-transparent {
     margin-right: 10px;
 }
 
-.btn {
+/*.btn {
     background-image: none;
     -webkit-box-shadow: 0px 1px 0px #ddd;
     -moz-box-shadow: 0px 1px 0px #ddd;
     box-shadow: 0px 1px 0px #ddd;
-}
+}*/
 
 /* Home page styling */
 .corporate-jumbo {
@@ -179,6 +179,11 @@ body>.navbar-transparent {
 }
 
 /*Custom Styling*/
+.form-head {
+  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAJklEQVQIW2NkAIILFy78NzAwYATRjCABZEGwAEwFiA1WBlIOUwkA72gTdDIYVO4AAAAASUVORK5CYII=) repeat;
+  padding: 30px 30px 30px 20px;
+  margin-top: 50px;
+}
 .sign-up-btn {
   color: #fff;
   display: inline-block;
@@ -186,15 +191,24 @@ body>.navbar-transparent {
   -webkit-border-radius:  5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  text-decoration: none!important;
+  text-decoration: none;
   border: 0;
   cursor: pointer;
+
 }
 
+/*.sign-up-btn:hover {
+
+    color: #DC7B0F;
+}*/
 .btn-orange {
   background-color: #f49020;
+  transition: background-color .2s ease-out;
 }
 
+.btn-orange:hover {
+  background-color: #DC7B0F;
+}
 .full-width {
   width: 100%;
 }
@@ -228,6 +242,11 @@ body>.navbar-transparent {
   border-right: 1px dashed #ccc;
 }
 
+.quiz-form-container {
+  width: 50%;
+  padding: 30px 20px 20px 30px;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -236,6 +255,9 @@ body>.navbar-transparent {
   text-align: left;
 }
 
+.align-center {
+  padding: 30px 20px 20px 40px;
+}
 .v-middle {
   vertical-align: middle;
 }
@@ -243,4 +265,9 @@ body>.navbar-transparent {
 .social-form-container {
   padding: 10px 20px 20px 30px;
   width: 40%;
+}
+
+.dark {
+  padding-bottom: 20px;
+  font-weight: bold;
 }
