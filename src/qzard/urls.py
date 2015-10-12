@@ -5,7 +5,6 @@ from django.conf.urls.static import static
 import profiles.urls
 import accounts.urls
 from . import views
-
 urlpatterns = [
     url(r'^$', views.HomePage.as_view(), name='home'),
     url(r'^about/$', views.AboutPage.as_view(), name='about'),
@@ -14,6 +13,7 @@ urlpatterns = [
     url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
     url(r'^', include(accounts.urls, namespace='accounts')),
     url(r'^accounts/', include('allauth.urls')),
+    url(r'^quiz/', include('quiz.urls')),
 
 ]
 
