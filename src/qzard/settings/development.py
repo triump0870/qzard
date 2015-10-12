@@ -41,6 +41,14 @@ INSTALLED_APPS += (
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
+    'quiz',
+    'multichoice',
+    'true_false',
+    'essay',
+
+    # local
+
+
     )
 
 # Django debug toolbar middleware
